@@ -5,6 +5,7 @@
 // import { useState } from "react";
 import "./App.css";
 import Description from "../Description/Description";
+import Options from "../Options/Options";
 
 function App() {
   // const [feedback, setFeedback] = useState;
@@ -12,6 +13,7 @@ function App() {
   return (
     <>
       <Description />
+      <Options />
     </>
   );
 }
