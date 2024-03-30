@@ -1,12 +1,11 @@
 // import css from './Options.module.css';
 
-function Options() {
+function Options(onLeaveFeedback) {
   return (
     <>
-      <button>good</button>
-      <button>neutral</button>
-      <button>bad</button>
-      <button>reset</button>
+      <button onClick={() => onLeaveFeedback("good")}>Good</button>
+      <button onClick={() => onLeaveFeedback("neutral")}>Neutral</button>
+      <button onClick={() => onLeaveFeedback("bad")}>Bad</button>
     </>
   );
 }
