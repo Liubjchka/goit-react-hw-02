@@ -3,6 +3,7 @@ import Description from "../Description/Description";
 import Options from "../Options/Options";
 import Feedback from "../Feedback/Feedback";
 import { useState, useEffect } from "react";
+import Notification from "../Notification/Notification";
 
 function App() {
   const [feedback, setFeedback] = useState(() => {
@@ -29,11 +30,21 @@ function App() {
     window.localStorage.setItem("saved-feedbacks", JSON.stringify(feedback));
   }, [feedback]);
 
+  const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
+
   return (
     <>
       <Description />
       <Options updateFeedback={updateFeedback} />
       <Feedback {...feedback} />
+      {totalFeedback.length > 0 && (
+        <Feedback
+          good={Feedback.good}
+          neutral={Feedback.neutral}
+          bad={Feedback.bad}
+        />
+      )}
+      <Notification />
     </>
   );
 }
