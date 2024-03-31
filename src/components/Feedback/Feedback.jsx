@@ -1,6 +1,6 @@
 // import css from "./Feedback.module.css";
 
-function Feedback(good, neutral, bad, reset) {
+function Feedback({ good, neutral, bad, reset }) {
   return (
     <>
       <p>Good: {good}</p>
