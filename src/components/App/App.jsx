@@ -18,10 +18,10 @@ function App() {
     }
   });
 
-  const increaseFeedback = (type) => {
+  const updateFeedback = (feedbackType) => {
     setFeedback({
       ...feedback,
-      [type]: feedback[type] + 1,
+      [feedbackType]: feedback[feedbackType] + 1,
     });
   };
 
@@ -32,7 +32,7 @@ function App() {
   return (
     <>
       <Description />
-      <Options increaseFeedback={increaseFeedback} />
+      <Options updateFeedback={updateFeedback} />
       <Feedback {...feedback} />
     </>
   );

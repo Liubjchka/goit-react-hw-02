@@ -1,11 +1,11 @@
 // import css from './Options.module.css';
 
-function Options(increaseFeedback) {
+function Options({ updateFeedback }) {
   return (
     <>
-      <button onClick={() => increaseFeedback("good")}>Good</button>
-      <button onClick={() => increaseFeedback("neutral")}>Neutral</button>
-      <button onClick={() => increaseFeedback("bad")}>Bad</button>
+      <button onClick={() => updateFeedback("good")}>Good</button>
+      <button onClick={() => updateFeedback("neutral")}>Neutral</button>
+      <button onClick={() => updateFeedback("bad")}>Bad</button>
     </>
   );
 }
