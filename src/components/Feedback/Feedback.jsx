@@ -7,7 +7,7 @@ function Feedback({ good, neutral, bad, totalFeedback, positiveFeedback }) {
       <p>Neutral: {neutral}</p>
       <p>Bad: {bad}</p>
       <p>Total: {totalFeedback}</p>
-      <p>Positive feedback: {positiveFeedback}%</p>
+      <p>Positive: {positiveFeedback}%</p>
     </>
   );
 }
