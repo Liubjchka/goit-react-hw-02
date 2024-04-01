@@ -46,12 +46,7 @@ function App() {
     <>
       <Description />
       <Options updateFeedback={updateFeedback} resetFeedback={resetFeedback} />
-      <Feedback
-        {...feedback}
-        totalFeedback={totalFeedback}
-        positiveFeedback={positiveFeedback}
-      />
-      {totalFeedback.length > 0 ? (
+      {totalFeedback > 0 ? (
         <Feedback
           {...feedback}
           totalFeedback={totalFeedback}
